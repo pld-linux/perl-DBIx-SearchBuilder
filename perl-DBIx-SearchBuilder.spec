@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBIx
 %define	pnam	SearchBuilder
-Summary:	DBIx::SearchBuilder -- easy SQL SELECT Statement generation
-Summary(pl):	DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT
+Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
+Summary(pl):	DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.99
 Release:	1
