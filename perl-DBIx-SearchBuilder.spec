@@ -7,7 +7,7 @@
 %define	pnam	SearchBuilder
 Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
 Summary(pl):	DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-DBIx-SearchBuilder
 Version:	0.99
 Release:	1
 # same as perl
