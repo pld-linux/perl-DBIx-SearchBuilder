@@ -10,8 +10,8 @@ Summary(pl):	DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.99
 Release:	1
-# same as Perl
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7a59fbb8eb0db425fd4835ac4bc407de
