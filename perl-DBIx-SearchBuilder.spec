@@ -1,19 +1,26 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBIx
 %define	pnam	SearchBuilder
 Summary:	DBIx::SearchBuilder -- easy SQL SELECT Statement generation
 Summary(pl):	DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.92
+Version:	0.94
 Release:	1
-License:	GPL/Artistic
+# same as Perl
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8827c5c1889489f7659ac4aad6e7dae4
+# Source0-md5:	240a803349453ba9f247f79c273e5662
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Class-DBI
+%if %{with tests}
+BuildRequires:	perl-DBI
 BuildRequires:	perl-Class-ReturnValue
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,12 +37,13 @@ DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
