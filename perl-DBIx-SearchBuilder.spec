@@ -8,13 +8,13 @@
 Summary:	DBIx::SearchBuilder -- easy SQL SELECT Statement generation
 Summary(pl):	DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.97
+Version:	0.99
 Release:	1
 # same as Perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	c3e60a34780ee92db8a505ebf9304fc2
+# Source0-md5:	7a59fbb8eb0db425fd4835ac4bc407de
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
