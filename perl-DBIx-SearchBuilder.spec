@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBIx
 %define		pnam	SearchBuilder
@@ -15,18 +15,18 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3d4c4dfc46617f87f53645241288505f
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-Cache-Simple-TimedExpiry
 BuildRequires:	perl-Class-Accessor
-BuildRequires:	perl-capitalization
+BuildRequires:	perl-Class-ReturnValue
+BuildRequires:	perl-Clone
 BuildRequires:	perl-DBD-SQLite
 BuildRequires:	perl-DBI
 BuildRequires:	perl-DBIx-DBSchema
-BuildRequires:	perl-Class-ReturnValue
-BuildRequires:	perl-Clone
-BuildRequires:	perl-Cache-Simple-TimedExpiry
 BuildRequires:	perl-Encode
-BuildRequires:  perl-Want
+BuildRequires:	perl-Want
+BuildRequires:	perl-capitalization
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Test-Pod >= 1.00
 %endif
