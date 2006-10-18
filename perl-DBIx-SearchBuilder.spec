@@ -9,7 +9,7 @@ Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
 Summary(pl):	DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT
 Name:		perl-DBIx-SearchBuilder
 Version:	1.45
-Release:	1
+Release:	1.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -18,12 +18,14 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Cache-Simple-TimedExpiry
+BuildRequires:	perl-Class-ReturnValue >= 0.40
+BuildRequires:	perl-Clone
 BuildRequires:	perl-DBD-SQLite
 BuildRequires:	perl-DBI
-BuildRequires:	perl-Class-ReturnValue
-BuildRequires:	perl-Cache-Simple-TimedExpiry
 BuildRequires:	perl-Test-Pod >= 1.00
 BuildRequires:	perl-Want
+BuildRequires:	perl-capitalization
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,10 +33,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	'perl(DBD::Oracle)'
 
 %description
-DBIx::SearchBuilder -- easy SQL SELECT Statement generation.
+DBIx::SearchBuilder - easy SQL SELECT Statement generation.
 
 %description -l pl
-DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT.
+DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
