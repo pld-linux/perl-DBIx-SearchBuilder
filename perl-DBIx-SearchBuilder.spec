@@ -6,7 +6,7 @@
 %define		pdir	DBIx
 %define		pnam	SearchBuilder
 Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
-Summary(pl):	DBIx::SearchBuilder - ³atwe generowanie polecenia SQL SELECT
+Summary(pl.UTF-8):   DBIx::SearchBuilder - Å‚atwe generowanie polecenia SQL SELECT
 Name:		perl-DBIx-SearchBuilder
 Version:	1.45
 Release:	1
@@ -38,8 +38,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DBIx::SearchBuilder -- easy SQL SELECT Statement generation.
 
-%description -l pl
-DBIx::SearchBuilder -- ³atwe generowanie polecenia SQL SELECT.
+%description -l pl.UTF-8
+DBIx::SearchBuilder -- Å‚atwe generowanie polecenia SQL SELECT.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
