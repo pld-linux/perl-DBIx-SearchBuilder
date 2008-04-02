@@ -8,13 +8,13 @@
 Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
 Summary(pl.UTF-8):	DBIx::SearchBuilder - łatwe generowanie polecenia SQL SELECT
 Name:		perl-DBIx-SearchBuilder
-Version:	1.50
+Version:	1.53
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBIx/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	36d745d3469d7fd9318c393557eca6da
+# Source0-md5:	7438ba3a7c4729dcca14c4ea3872ac23
 URL:		http://search.cpan.org/dist/DBIx-SearchBuilder/
 BuildRequires:	perl-Cache-Simple-TimedExpiry
 BuildRequires:	perl-Class-Accessor
