@@ -8,28 +8,24 @@
 Summary:	DBIx::SearchBuilder - easy SQL SELECT Statement generation
 Summary(pl.UTF-8):	DBIx::SearchBuilder - łatwe generowanie polecenia SQL SELECT
 Name:		perl-DBIx-SearchBuilder
-Version:	1.54
+Version:	1.55
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBIx/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	24ece8f03289c716c2af240cac6f08fd
+# Source0-md5:	0e04e85332c99012e3b672e67200ba2a
 URL:		http://search.cpan.org/dist/DBIx-SearchBuilder/
-BuildRequires:	perl-Cache-Simple-TimedExpiry
-BuildRequires:	perl-Class-Accessor
-BuildRequires:	perl-Class-ReturnValue
-BuildRequires:	perl-Clone
-BuildRequires:	perl-DBD-SQLite
-BuildRequires:	perl-DBI
-BuildRequires:	perl-DBIx-DBSchema
-BuildRequires:	perl-Encode
-BuildRequires:	perl-Want
-BuildRequires:	perl-capitalization
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Pod >= 1.00
+BuildRequires:	perl(Cache::Simple::TimedExpiry) >= 0.21
+BuildRequires:	perl(Class::ReturnValue) >= 0.4
+BuildRequires:	perl(Want)
+BuildRequires:	perl-Clone
+BuildRequires:	perl-DBI
+BuildRequires:	perl-DBD-SQLite
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.42
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,6 +45,7 @@ DBIx::SearchBuilder -- łatwe generowanie polecenia SQL SELECT.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
 %{?with_tests:%{__make} test}
 
 %install
@@ -62,6 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorlib}/%{pdir}/*.pm
-%{perl_vendorlib}/%{pdir}/%{pnam}
+%doc Changes README
+%{perl_vendorlib}/DBIx/*.pm
+%{perl_vendorlib}/DBIx/SearchBuilder
 %{_mandir}/man3/*
