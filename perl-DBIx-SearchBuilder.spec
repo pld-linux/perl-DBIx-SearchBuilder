@@ -19,6 +19,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Cache::Simple::TimedExpiry) >= 0.21
+BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Class::ReturnValue) >= 0.4
 BuildRequires:	perl(DBIx::DBSchema)
 BuildRequires:	perl(Want)
